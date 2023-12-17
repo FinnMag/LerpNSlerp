@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpb6tyb6jj5p1"]
+
+[ext_resource type="Script" path="res://space_enemy.gd" id="1_4boyp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xeark"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nuxpt"]
+
+[node name="space_enemy" type="CharacterBody3D"]
+script = ExtResource("1_4boyp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xeark")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11306, 1.19209e-07, 0.0617657)
+shape = SubResource("BoxShape3D_nuxpt")
